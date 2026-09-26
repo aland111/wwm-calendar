@@ -112,6 +112,13 @@ def main() -> None:
     broadcasts = parse_schedule(fetch_schedule(), now)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_bytes(build_calendar(broadcasts, now))
+    (args.output.parent / "index.html").write_text(
+        '<!doctype html><html lang="de"><meta charset="utf-8">'
+        '<title>Wer wird Millionär? – Kalender</title>'
+        '<h1>Wer wird Millionär? – Kalender</h1>'
+        '<p><a href="wwm.ics">Kalender abonnieren (.ics)</a></p></html>',
+        encoding="utf-8",
+    )
     print(f"{len(broadcasts)} kommende RTL-Ausstrahlungen nach {args.output} geschrieben")
     for broadcast in broadcasts:
         print(f"{broadcast.start:%d.%m.%Y %H:%M}–{broadcast.end:%H:%M} {broadcast.title}")
