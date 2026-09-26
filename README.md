@@ -14,12 +14,9 @@ python wwm_calendar.py
 
 Die Datei liegt danach unter `site/wwm.ics`. Ein **Dateiimport aktualisiert sich nicht automatisch**. Für laufende Aktualisierungen muss die Datei unter einer dauerhaft erreichbaren HTTPS-Adresse veröffentlicht und als Kalender abonniert werden.
 
-## Automatisch mit GitHub Pages veröffentlichen
+## Kalender abonnieren
 
-1. Die Dateien in diesem Repository auf den Standardbranch `main` übertragen.
-2. In **Settings → Pages → Build and deployment** die Quelle **GitHub Actions** wählen.
-3. Unter **Actions → Publish WWM calendar** lässt sich der Workflow bei Bedarf manuell starten. Geplant läuft er jeden Sonntag um 06:17 UTC (07:17 Uhr MEZ bzw. 08:17 Uhr MESZ).
-4. Die Abo-URL lautet `https://aland111.github.io/wwm-calendar/wwm.ics`.
+Abo-URL: https://aland111.github.io/wwm-calendar/wwm.ics
 
 ### Google Kalender
 
@@ -27,7 +24,7 @@ Am Computer `calendar.google.com` öffnen → **Weitere Kalender → + → Per U
 
 ### Apple Kalender / iCloud
 
-Auf dem iPhone in **Kalender → Kalender → Hinzufügen → Kalenderabonnement hinzufügen** dieselbe URL einfügen und als Account **iCloud** wählen. So ist das Abo von deinem getrennten Google-Kalender unabhängig.
+Auf dem iPhone in **Kalender → Kalender → Hinzufügen → Kalenderabonnement hinzufügen** dieselbe URL einfügen und als Account **iCloud** wählen.
 
 ## Daten und Grenzen
 
