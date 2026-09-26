@@ -83,7 +83,7 @@ def build_calendar(broadcasts: list[Broadcast], generated_at: datetime) -> bytes
     calendar.add("calscale", "GREGORIAN")
     calendar.add("x-wr-calname", CALENDAR_NAME)
     calendar.add("x-wr-timezone", "Europe/Berlin")
-    calendar.add("refresh-interval", timedelta(hours=6))
+    calendar.add("refresh-interval", timedelta(days=7))
 
     daily_count: defaultdict[str, int] = defaultdict(int)
     for broadcast in broadcasts:

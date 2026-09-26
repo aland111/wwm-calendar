@@ -18,7 +18,7 @@ Die Datei liegt danach unter `site/wwm.ics`. Ein **Dateiimport aktualisiert sich
 
 1. Die Dateien in diesem Repository auf den Standardbranch `main` übertragen.
 2. In **Settings → Pages → Build and deployment** die Quelle **GitHub Actions** wählen.
-3. Unter **Actions → Publish WWM calendar** den Workflow einmal manuell starten. Danach aktualisiert er den Feed alle sechs Stunden.
+3. Unter **Actions → Publish WWM calendar** lässt sich der Workflow bei Bedarf manuell starten. Geplant läuft er jeden Sonntag um 06:17 UTC (07:17 Uhr MEZ bzw. 08:17 Uhr MESZ).
 4. Die Abo-URL lautet `https://aland111.github.io/wwm-calendar/wwm.ics`.
 
 ### Google Kalender
