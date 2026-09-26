@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 from collections import defaultdict
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
 
@@ -14,6 +14,7 @@ from icalendar import Calendar, Event
 
 
 SCHEDULE_URL = "https://www.fernsehserien.de/wer-wird-millionaer/sendetermine/rtl"
+CALENDAR_NAME = "Wer wird Millionär? – RTL"
 
 
 @dataclass(frozen=True)
@@ -80,6 +81,9 @@ def build_calendar(broadcasts: list[Broadcast], generated_at: datetime) -> bytes
     calendar.add("prodid", "-//WWM Calendar//DE")
     calendar.add("version", "2.0")
     calendar.add("calscale", "GREGORIAN")
+    calendar.add("x-wr-calname", CALENDAR_NAME)
+    calendar.add("x-wr-timezone", "Europe/Berlin")
+    calendar.add("refresh-interval", timedelta(days=7))
 
     daily_count: defaultdict[str, int] = defaultdict(int)
     for broadcast in broadcasts:
